@@ -7,12 +7,13 @@ public class CoinFlip implements Runnable{
 	public static int total_flips = 0;
 	public static int total_heads = 0;
 	public static int single_flips = 0;
-	
+	private Random coin = new Random();	
+
 	 // Run: overides Runnabale.Run, thread entry point
 	public void run ()
 	{
 		//System.out.format("Start %d thread%n", thread_id);
-		Random coin = new Random ();
+		//Random coin = new Random ();
 		for(int i = 0 ; i < single_flips ; i++)
 			if( coin.nextInt() >= 0 )
 				single_heads++;
@@ -65,23 +66,23 @@ public class CoinFlip implements Runnable{
 		//System.out.format("%d Threads Initialization Completed...%n", thread_num);
 		
 		// Await the completion of all threads
-	    for ( int i=0; i<thread_num; i++ )
-	    {
-	      try
-	      {
-	        th[i].join();
-	      }
-	      catch (InterruptedException e)
-	      {
-	         System.out.println("Thread interrupted.  Exception: " + e.toString() +
+	   	for ( int i=0; i<thread_num; i++ )
+	    	{
+	      		try
+	      		{
+	        		th[i].join();
+	      		}
+	      		catch (InterruptedException e)
+	      		{
+	         		System.out.println("Thread interrupted.  Exception: " + e.toString() +
 	                           " Message: " + e.getMessage()) ;
-	        return;
-	      }
-	    }
-	    long elapsed = System.currentTimeMillis() - runstart;
+	        		return;
+	      		}
+	    	}
+	    	long elapsed = System.currentTimeMillis() - runstart;
 	    
-	    System.out.println(total_heads + " heads in " + total_flips + " tosses.");
-	    System.out.println("Elapsed time: " + elapsed + "ms");
+	    	System.out.println(total_heads + " heads in " + total_flips + " tosses.");
+	    	System.out.println("Elapsed time: " + elapsed + "ms");
 		
 		/*/ Starup Cost for each thread
 		System.out.println("Startup Cost Experiment...");

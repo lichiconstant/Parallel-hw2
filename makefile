@@ -9,6 +9,7 @@ JC = javac
 
 CLASSES = \
         CoinFlip.java \
+	startup_cost.java \
 	SealedDES.java \
 	BruteForceDES.java
 				

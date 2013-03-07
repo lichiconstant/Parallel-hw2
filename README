@@ -1,0 +1,19 @@
+Assignment2, Parallel Programming
+
+Name: Chi Li
+JHED: cli53
+Date: 03/07/2013
+Version: 1.0
+
+Program Running Instruction:
+
+There are four java files in this folder. CoinFlip.java and startup_cost.java solve the first problem. BruteForceDES.java and SealedDES.java are for the second problem. The compilation has been configured in makefile. run_hw2.sh is the shell script which contains all the things to run the program including compilation and parameter adjustment for each test.
+
+You can just run the shell script (run_hw2.sh) on the Amazon cloud computer to get the experiment result. The result will be saved in the text file "hw2_result.txt" under the same folder. You can preview my raw experiment result from "hw2_result.txt". For each speedup and scaleup experiment in both CoinFlip and DES, I iterate 17 times and get median of runtime as the final result. 
+
+Since there are 17 iterations for each individual experiment, you have to wait for more than 20 mins to see the final result. There are two ways to solve this. One is to change the value of the variable 'testIter' to 1. The other is to manually run each java program and input the parameters. 
+
+The idea of experiment design is introduced in detail in the pdf submission. You can also access to the code itself to see the implementation details.
+
+There shouldn't be any problem to compile and run the program. If you have any questions, do not hesitate to contact me (lichiconstant@gmail.com). Thank you!
+  

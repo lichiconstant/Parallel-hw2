@@ -117,7 +117,8 @@ class BruteForceDES extends SealedDES implements Runnable{
 		//SealedObject sldObj = enccipher.encrypt ( plainstr );
 		long runstart;
 		runstart = System.currentTimeMillis();
-
+		
+		// Array for sldObj in order to eliminate shared variable between threads
 		SealedObject[] sldObj = new SealedObject[num_threads];
 		String[] knownText = new String[num_threads];
 		long[] index = new long[num_threads+1];
